@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cruzeiros com Paulo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .parallax {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                      url('./assets/cruzeiro.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+    .parallax h1 {
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .btn-hero {
+      background-color: #00bcd4;
+      border: none;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      z-index: 1000;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-float i {
+      line-height: 60px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+  .parallax h1 {
+    font-size: 2.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5511954698603" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Cruzeiros com Paulo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tendencias">Tendências</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Parallax Hero -->
+  <section class="parallax">
+    <div class="container">
+      <h1>Olá, eu sou o Paulo,<br> seu agente de viagens especializado em cruzeiros!</h1>
+      <p class="lead">Transforme sua próxima viagem em uma experiência inesquecível no mar.</p>
+      <a href="#tendencias" class="btn btn-hero btn-lg mt-3 text-white">Descubra os destinos em alta</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre a Agência</h2>
+      <p class="text-center mb-5">
+        Com anos de experiência levando viajantes aos destinos mais fascinantes, a <strong>Agência Cruzeiros com Paulo</strong> oferece atendimento personalizado, consultoria especializada e os melhores pacotes para você viver momentos únicos a bordo dos navios mais luxuosos do mundo.
+      </p>
+      <div class="text-center">
+        <img src="https://source.unsplash.com/800x400/?cruise" class="img-fluid rounded shadow" alt="Navio de cruzeiro">
+      </div>
+    </div>
+  </section>
+
+  <!-- Tendências -->
+  <section id="tendencias" class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Tendências em Cruzeiros 2025</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="https://source.unsplash.com/400x300/?caribbean,cruise" class="card-img-top" alt="Caribe">
+            <div class="card-body">
+              <h5 class="card-title">Caribe All Inclusive</h5>
+              <p class="card-text">Sinta a brisa tropical em cruzeiros com tudo incluso, bebidas, festas e praias paradisíacas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="https://source.unsplash.com/400x300/?alaska,cruise" class="card-img-top" alt="Alasca">
+            <div class="card-body">
+              <h5 class="card-title">Cruzeiro pelo Alasca</h5>
+              <p class="card-text">Paisagens glaciais, natureza selvagem e luxo a bordo. Uma experiência única e gelada.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="https://source.unsplash.com/400x300/?mediterranean,cruise" class="card-img-top" alt="Mediterrâneo">
+            <div class="card-body">
+              <h5 class="card-title">Roteiro Mediterrâneo</h5>
+              <p class="card-text">Explore cidades históricas como Roma, Atenas e Barcelona em um só pacote luxuoso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Vamos Planejar Sua Viagem?</h2>
+      <p class="text-center mb-5">Preencha o formulário abaixo ou fale comigo direto pelo WhatsApp.</p>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Seu nome" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Seu e-mail" required>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" rows="4" placeholder="Sua mensagem..." required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>Siga nas redes sociais:</p>
+      <div class="social-icons mb-3">
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <p>© 2025 Cruzeiros com Paulo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
