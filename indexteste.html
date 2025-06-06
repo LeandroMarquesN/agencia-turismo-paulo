@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site com Dark Mode</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      padding: 20px;
+    }
+
+    /* Modo escuro */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    /* Botão flutuante do modo escuro */
+    .dark-mode-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .dark-mode-btn:hover {
+      background-color: #555;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao meu site</h1>
+  <p>
+    Este site agora possui um modo escuro moderno com botão flutuante. Clique no ícone no canto inferior direito para alternar entre os modos claro e escuro.
+  </p>
+
+  <!-- Botão flutuante -->
+  <button id="darkModeToggle" class="dark-mode-btn" title="Alternar modo escuro">🌙</button>
+
+  <!-- Script para alternar modo escuro -->
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    function setIcon(isDark) {
+      toggleBtn.innerHTML = isDark ? '☀️' : '🌙';
+    }
+
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedPreference = localStorage.getItem('darkMode');
+
+    if ((savedPreference === 'enabled') || (savedPreference === null && prefersDark)) {
+      body.classList.add('dark-mode');
+      setIcon(true);
+    } else {
+      setIcon(false);
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+      setIcon(isDark);
+    });
+  </script>
+</body>
+</html>
